@@ -38,7 +38,7 @@
 		android:layout_marginRight="35.3dp"
 		android:layout_alignBaseline="@id/Player1Label"
 		android:background="@android:color/background_dark" />
-	<TextView
+	<EditText
 		android:text="Name1"
 		android:textAppearance="?android:attr/textAppearanceMedium"
 		android:layout_width="wrap_content"
@@ -49,12 +49,12 @@
 		android:layout_alignLeft="@id/Player1Label"
 		android:layout_marginTop="10.7dp"
 		android:background="@android:color/background_dark" />
-	<TextView
+	<EditText
 		android:text="Name2"
 		android:textAppearance="?android:attr/textAppearanceMedium"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:id="@+id/Player2EditNext"
+		android:id="@+id/Player2EditText"
 		android:textColor="@android:color/holo_red_light"
 		android:layout_alignTop="@id/Player1EditText"
 		android:layout_alignRight="@id/Player2Label"
@@ -78,7 +78,7 @@
 		android:textAppearance="?android:attr/textAppearanceMedium"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:id="@+id/Player2Score"
+		android:id="@+id/Player2ScoreText"
 		android:textColor="@android:color/holo_red_light"
 		android:background="@android:color/background_dark"
 		android:layout_alignTop="@id/Player1ScoreText"
@@ -122,7 +122,7 @@
 	<TextView
 		android:text="Score"
 		android:textAppearance="?android:attr/textAppearanceMedium"
-		android:id="@+id/textView1"
+		android:id="@+id/ScoreForTurnLabel"
 		android:layout_width="158.0dp"
 		android:layout_height="wrap_content"
 		android:layout_below="@id/PointsForTurnLabel"
@@ -138,7 +138,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:id="@+id/RollButton"
-		android:layout_below="@id/textView1"
+		android:layout_below="@id/ScoreForTurnLabel"
 		android:layout_alignLeft="@id/Player1Label"
 		android:layout_marginTop="6.0dp" />
 	<Button
@@ -148,7 +148,7 @@
 		android:id="@+id/EndTurnButton"
 		android:layout_alignRight="@id/Player2Label"
 		android:layout_alignTop="@id/RollButton"
-		android:layout_below="@id/Player2Score" />
+		android:layout_below="@id/Player2ScoreText" />
 	<Button
 		android:text="New Game"
 		android:layout_width="154.7dp"

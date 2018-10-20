@@ -751,13 +751,14 @@ int id NewGameButton 0x7f0800b9
 int id Player1EditText 0x7f0800af
 int id Player1Label 0x7f0800ad
 int id Player1ScoreText 0x7f0800b1
-int id Player2EditNext 0x7f0800b0
+int id Player2EditText 0x7f0800b0
 int id Player2Label 0x7f0800ae
-int id Player2Score 0x7f0800b2
+int id Player2ScoreText 0x7f0800b2
 int id PointsForTurnLabel 0x7f0800b5
 int id RollButton 0x7f0800b7
 int id SHIFT 0x7f080036
 int id SYM 0x7f080037
+int id ScoreForTurnLabel 0x7f0800b6
 int id TurnLabel 0x7f0800b3
 int id action0 0x7f08009c
 int id action_bar 0x7f08007c
@@ -907,7 +908,6 @@ int id text 0x7f08001a
 int id text2 0x7f08001b
 int id textSpacerNoButtons 0x7f08006a
 int id textSpacerNoTitle 0x7f080069
-int id textView1 0x7f0800b6
 int id text_input_password_toggle 0x7f080098
 int id textinput_counter 0x7f080014
 int id textinput_error 0x7f080015

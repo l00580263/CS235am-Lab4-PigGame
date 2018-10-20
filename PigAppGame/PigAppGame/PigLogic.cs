@@ -11,8 +11,8 @@ namespace PigGame
     {
         /*************** fields ********************/
 
-        private const int WINNING_SCORE = 100;
-        public const int BAD_NUMBER = 1;
+        private const int WINNING_SCORE = 15;
+        public const int BAD_NUMBER = 8;
 
         private Random rand = new Random();
         private int player1Score;
@@ -62,7 +62,7 @@ namespace PigGame
         // Roll die and update turn points field
         public int RollDie()
         {
-            int roll = rand.Next(6) + 1;
+            int roll = rand.Next(8) + 1;
 
             if (roll != BAD_NUMBER)
             {

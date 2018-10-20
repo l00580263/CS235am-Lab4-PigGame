@@ -2965,13 +2965,14 @@ containing a value of this type.
         public static int Player1EditText=0x7f0800af;
         public static int Player1Label=0x7f0800ad;
         public static int Player1ScoreText=0x7f0800b1;
-        public static int Player2EditNext=0x7f0800b0;
+        public static int Player2EditText=0x7f0800b0;
         public static int Player2Label=0x7f0800ae;
-        public static int Player2Score=0x7f0800b2;
+        public static int Player2ScoreText=0x7f0800b2;
         public static int PointsForTurnLabel=0x7f0800b5;
         public static int RollButton=0x7f0800b7;
         public static int SHIFT=0x7f080036;
         public static int SYM=0x7f080037;
+        public static int ScoreForTurnLabel=0x7f0800b6;
         public static int TurnLabel=0x7f0800b3;
         public static int action0=0x7f08009c;
         public static int action_bar=0x7f08007c;
@@ -3121,7 +3122,6 @@ containing a value of this type.
         public static int text2=0x7f08001b;
         public static int textSpacerNoButtons=0x7f08006a;
         public static int textSpacerNoTitle=0x7f080069;
-        public static int textView1=0x7f0800b6;
         public static int text_input_password_toggle=0x7f080098;
         public static int textinput_counter=0x7f080014;
         public static int textinput_error=0x7f080015;

@@ -2595,13 +2595,13 @@ namespace PigAppGame
 			public const int Player1ScoreText = 2130837511;
 			
 			// aapt resource value: 0x7F020006
-			public const int Player2EditNext = 2130837510;
+			public const int Player2EditText = 2130837510;
 			
 			// aapt resource value: 0x7F020004
 			public const int Player2Label = 2130837508;
 			
 			// aapt resource value: 0x7F020008
-			public const int Player2Score = 2130837512;
+			public const int Player2ScoreText = 2130837512;
 			
 			// aapt resource value: 0x7F020011
 			public const int PointsForTurnLabel = 2130837521;
@@ -2635,6 +2635,9 @@ namespace PigAppGame
 			
 			// aapt resource value: 0x7F0C0059
 			public const int save_scale_type = 2131492953;
+			
+			// aapt resource value: 0x7F020012
+			public const int ScoreForTurnLabel = 2130837522;
 			
 			// aapt resource value: 0x7F0C005A
 			public const int screen = 2131492954;
@@ -2746,9 +2749,6 @@ namespace PigAppGame
 			
 			// aapt resource value: 0x7F0C007C
 			public const int textSpacerNoTitle = 2131492988;
-			
-			// aapt resource value: 0x7F020012
-			public const int textView1 = 2130837522;
 			
 			// aapt resource value: 0x7F0C007D
 			public const int text_input_password_toggle = 2131492989;
