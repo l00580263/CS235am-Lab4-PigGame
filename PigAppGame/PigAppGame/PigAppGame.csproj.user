@@ -3,5 +3,7 @@
   <PropertyGroup>
     <SelectedDevice>Android_Accelerated_x86_Oreo</SelectedDevice>
     <DefaultDevice>Android_Accelerated_x86_Oreo</DefaultDevice>
+    <AndroidDesignerPreferredTheme>AppTheme</AndroidDesignerPreferredTheme>
+    <AndroidDesignerPreferredDevice>Nexus One</AndroidDesignerPreferredDevice>
   </PropertyGroup>
 </Project>
