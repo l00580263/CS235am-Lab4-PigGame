@@ -2957,9 +2957,11 @@ containing a value of this type.
     public static final class id {
         public static final int ALT=0x7f080032;
         public static final int CTRL=0x7f080033;
+        public static final int CenterLinearLayout=0x7f0800bb;
         public static final int DieImage=0x7f0800b4;
         public static final int EndTurnButton=0x7f0800b8;
         public static final int FUNCTION=0x7f080034;
+        public static final int LeftLinearLayout=0x7f0800ba;
         public static final int META=0x7f080035;
         public static final int NewGameButton=0x7f0800b9;
         public static final int Player1EditText=0x7f0800af;
@@ -2969,6 +2971,7 @@ containing a value of this type.
         public static final int Player2Label=0x7f0800ae;
         public static final int Player2ScoreText=0x7f0800b2;
         public static final int PointsForTurnLabel=0x7f0800b5;
+        public static final int RightLinearLayout=0x7f0800bc;
         public static final int RollButton=0x7f0800b7;
         public static final int SHIFT=0x7f080036;
         public static final int SYM=0x7f080037;
@@ -3056,9 +3059,9 @@ containing a value of this type.
         public static final int line3=0x7f080018;
         public static final int listMode=0x7f08001d;
         public static final int list_item=0x7f080061;
-        public static final int masked=0x7f0800bc;
+        public static final int masked=0x7f0800bf;
         public static final int media_actions=0x7f08009f;
-        public static final int message=0x7f0800ba;
+        public static final int message=0x7f0800bd;
         public static final int middle=0x7f080031;
         public static final int mini=0x7f080053;
         public static final int multiply=0x7f080028;
@@ -3141,7 +3144,7 @@ containing a value of this type.
         public static final int up=0x7f080009;
         public static final int useLogo=0x7f080026;
         public static final int view_offset_helper=0x7f080016;
-        public static final int visible=0x7f0800bb;
+        public static final int visible=0x7f0800be;
         public static final int withText=0x7f08003c;
         public static final int wrap_content=0x7f08002e;
     }

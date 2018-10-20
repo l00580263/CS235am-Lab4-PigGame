@@ -4,6 +4,8 @@ using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
 using PigGame;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace PigAppGame
 {
@@ -12,45 +14,84 @@ namespace PigAppGame
     {
         #region Fields
         PigLogic game;
+        const string BUNLDE_KEY = "bundlekey";
         #endregion
 
 
 
         #region Methods
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle bundle)
         {
-            base.OnCreate(savedInstanceState);
+            base.OnCreate(bundle);
 
             // Set view
             SetContentView(Resource.Layout.PigsUI);
 
             // new game
-            SetUp();
+            SetUp(bundle);
         }
 
 
 
-        void SetUp()
+        protected override void OnSaveInstanceState(Bundle outState)
         {
-            // new game
-            game = new PigLogic();
+            // make savedGame
+            SaveGame savedGame = new SaveGame() { Player1Score = game.Player1Score, Player2Score = game.Player2Score, WhosTurn = game.Turn, TurnScore = game.TurnPoints, Rollable = IsRollButtonEnabled()};
+            // make writer
+            StringWriter writer = new StringWriter();
+            // make serializer
+            XmlSerializer cereal = new XmlSerializer(typeof(SaveGame));
+            // serialize
+            cereal.Serialize(writer, savedGame);
+            // get string saved game
+            string savedGameString = writer.ToString();
+            // give bundle saved game
+            outState.PutString(BUNLDE_KEY, savedGameString);
+
+            base.OnSaveInstanceState(outState);
+        }
+
+
+
+        void SetUp(Bundle bundle)
+        {
+            if (bundle != null)
+            {
+                // load game
+                // get game string
+                string gameString = bundle.GetString(BUNLDE_KEY);
+                // make serializer
+                XmlSerializer cereal = new XmlSerializer(typeof(SaveGame));
+                // make reader
+                StringReader reader = new StringReader(gameString);
+                // get saved game
+                SaveGame savedGame = (SaveGame)cereal.Deserialize(reader);
+
+                // remake game
+                game = new PigLogic(savedGame.Player1Score, savedGame.Player2Score, savedGame.TurnScore, savedGame.WhosTurn);
+
+                // check if turn is bombed
+                if (!savedGame.Rollable)
+                {
+                    DisableRollButton();
+                }
+            }
+            else
+            {
+                // new game
+                game = new PigLogic();
+            }
 
             // set player names
             game.Player1Name = FindViewById<TextView>(Resource.Id.Player1EditText).Text;
             game.Player2Name = FindViewById<TextView>(Resource.Id.Player2EditText).Text;
             
             // set up events so new names will update the game
-            FindViewById<EditText>(Resource.Id.Player1EditText).TextChanged += (sender, args) => { game.Player1Name = FindViewById<EditText>(Resource.Id.Player1EditText).Text; UpdateWhosTurn(); };
-            FindViewById<EditText>(Resource.Id.Player2EditText).TextChanged += (sender, args) => { game.Player2Name = FindViewById<EditText>(Resource.Id.Player2EditText).Text; UpdateWhosTurn(); };
-           
-            // set turn points in UI
-            UpdatePointsForTurn();
+            FindViewById<EditText>(Resource.Id.Player1EditText).AfterTextChanged += (sender, args) => { game.Player1Name = FindViewById<EditText>(Resource.Id.Player1EditText).Text; UpdateWhosTurn(); };
+            FindViewById<EditText>(Resource.Id.Player2EditText).AfterTextChanged += (sender, args) => { game.Player2Name = FindViewById<EditText>(Resource.Id.Player2EditText).Text; UpdateWhosTurn(); };
 
-            // set scores
-            UpdatePlayerScore();
-           
-            // update whos turn ui
-            UpdateWhosTurn();
+            // set up UI
+            FlushUI();
 
             // set up buttons
             // roll button rolls and updates points for turn UI and update dice image and checks if bad number was rolled
@@ -83,6 +124,12 @@ namespace PigAppGame
         void UpdateWhosTurn()
         {
             // set turn points in UI
+            if (game.CheckForWinner().Length > 0)
+            {
+                // game is over
+                return;
+            }
+
             FindViewById<TextView>(Resource.Id.TurnLabel).Text = game.GetCurrentPlayer() + "'s turn";
         }
 
@@ -94,6 +141,7 @@ namespace PigAppGame
             UpdatePlayerScore();
             UpdatePointsForTurn();
             UpdateWhosTurn();
+            WinOrLose();
         }
 
 
@@ -133,6 +181,13 @@ namespace PigAppGame
 
 
 
+        bool IsRollButtonEnabled()
+        {
+            return FindViewById<Button>(Resource.Id.RollButton).Enabled;
+        }
+
+
+
         void EnableEndTurnButton()
         {
             FindViewById<Button>(Resource.Id.EndTurnButton).Enabled = true;
@@ -143,6 +198,13 @@ namespace PigAppGame
         void DisableTurnButton()
         {
             FindViewById<Button>(Resource.Id.EndTurnButton).Enabled = false;
+        }
+
+
+
+        bool IsTurnButtonEnabled()
+        {
+            return FindViewById<Button>(Resource.Id.EndTurnButton).Enabled;
         }
 
 

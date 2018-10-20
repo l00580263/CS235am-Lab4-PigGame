@@ -743,9 +743,11 @@ int drawable tooltip_frame_light 0x7f02006f
 int drawable warneverchanges 0x7f020070
 int id ALT 0x7f080032
 int id CTRL 0x7f080033
+int id CenterLinearLayout 0x7f0800bb
 int id DieImage 0x7f0800b4
 int id EndTurnButton 0x7f0800b8
 int id FUNCTION 0x7f080034
+int id LeftLinearLayout 0x7f0800ba
 int id META 0x7f080035
 int id NewGameButton 0x7f0800b9
 int id Player1EditText 0x7f0800af
@@ -755,6 +757,7 @@ int id Player2EditText 0x7f0800b0
 int id Player2Label 0x7f0800ae
 int id Player2ScoreText 0x7f0800b2
 int id PointsForTurnLabel 0x7f0800b5
+int id RightLinearLayout 0x7f0800bc
 int id RollButton 0x7f0800b7
 int id SHIFT 0x7f080036
 int id SYM 0x7f080037
@@ -842,9 +845,9 @@ int id line1 0x7f080017
 int id line3 0x7f080018
 int id listMode 0x7f08001d
 int id list_item 0x7f080061
-int id masked 0x7f0800bc
+int id masked 0x7f0800bf
 int id media_actions 0x7f08009f
-int id message 0x7f0800ba
+int id message 0x7f0800bd
 int id middle 0x7f080031
 int id mini 0x7f080053
 int id multiply 0x7f080028
@@ -927,7 +930,7 @@ int id uniform 0x7f08002d
 int id up 0x7f080009
 int id useLogo 0x7f080026
 int id view_offset_helper 0x7f080016
-int id visible 0x7f0800bb
+int id visible 0x7f0800be
 int id withText 0x7f08003c
 int id wrap_content 0x7f08002e
 int integer abc_config_activityDefaultDur 0x7f0d0000

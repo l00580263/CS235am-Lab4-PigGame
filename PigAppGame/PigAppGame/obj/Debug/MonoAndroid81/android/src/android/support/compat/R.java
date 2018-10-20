@@ -2957,9 +2957,11 @@ containing a value of this type.
     public static final class id {
         public static int ALT=0x7f080032;
         public static int CTRL=0x7f080033;
+        public static int CenterLinearLayout=0x7f0800bb;
         public static int DieImage=0x7f0800b4;
         public static int EndTurnButton=0x7f0800b8;
         public static int FUNCTION=0x7f080034;
+        public static int LeftLinearLayout=0x7f0800ba;
         public static int META=0x7f080035;
         public static int NewGameButton=0x7f0800b9;
         public static int Player1EditText=0x7f0800af;
@@ -2969,6 +2971,7 @@ containing a value of this type.
         public static int Player2Label=0x7f0800ae;
         public static int Player2ScoreText=0x7f0800b2;
         public static int PointsForTurnLabel=0x7f0800b5;
+        public static int RightLinearLayout=0x7f0800bc;
         public static int RollButton=0x7f0800b7;
         public static int SHIFT=0x7f080036;
         public static int SYM=0x7f080037;
@@ -3056,9 +3059,9 @@ containing a value of this type.
         public static int line3=0x7f080018;
         public static int listMode=0x7f08001d;
         public static int list_item=0x7f080061;
-        public static int masked=0x7f0800bc;
+        public static int masked=0x7f0800bf;
         public static int media_actions=0x7f08009f;
-        public static int message=0x7f0800ba;
+        public static int message=0x7f0800bd;
         public static int middle=0x7f080031;
         public static int mini=0x7f080053;
         public static int multiply=0x7f080028;
@@ -3141,7 +3144,7 @@ containing a value of this type.
         public static int up=0x7f080009;
         public static int useLogo=0x7f080026;
         public static int view_offset_helper=0x7f080016;
-        public static int visible=0x7f0800bb;
+        public static int visible=0x7f0800be;
         public static int withText=0x7f08003c;
         public static int wrap_content=0x7f08002e;
     }

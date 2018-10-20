@@ -2420,6 +2420,9 @@ namespace PigAppGame
 			// aapt resource value: 0x7F0C001D
 			public const int center = 2131492893;
 			
+			// aapt resource value: 0x7F020017
+			public const int CenterLinearLayout = 2130837527;
+			
 			// aapt resource value: 0x7F0C001E
 			public const int checkbox = 2131492894;
 			
@@ -2525,6 +2528,9 @@ namespace PigAppGame
 			// aapt resource value: 0x7F0C003D
 			public const int left = 2131492925;
 			
+			// aapt resource value: 0x7F020016
+			public const int LeftLinearLayout = 2130837526;
+			
 			// aapt resource value: 0x7F0C000E
 			public const int line1 = 2131492878;
 			
@@ -2617,6 +2623,9 @@ namespace PigAppGame
 			
 			// aapt resource value: 0x7F0C0054
 			public const int right = 2131492948;
+			
+			// aapt resource value: 0x7F020018
+			public const int RightLinearLayout = 2130837528;
 			
 			// aapt resource value: 0x7F0C0014
 			public const int right_icon = 2131492884;

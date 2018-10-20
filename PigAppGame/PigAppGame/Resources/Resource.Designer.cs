@@ -2357,6 +2357,9 @@ namespace PigAppGame
 			// aapt resource value: 0x7f080033
 			public const int CTRL = 2131230771;
 			
+			// aapt resource value: 0x7f0800bb
+			public const int CenterLinearLayout = 2131230907;
+			
 			// aapt resource value: 0x7f0800b4
 			public const int DieImage = 2131230900;
 			
@@ -2365,6 +2368,9 @@ namespace PigAppGame
 			
 			// aapt resource value: 0x7f080034
 			public const int FUNCTION = 2131230772;
+			
+			// aapt resource value: 0x7f0800ba
+			public const int LeftLinearLayout = 2131230906;
 			
 			// aapt resource value: 0x7f080035
 			public const int META = 2131230773;
@@ -2392,6 +2398,9 @@ namespace PigAppGame
 			
 			// aapt resource value: 0x7f0800b5
 			public const int PointsForTurnLabel = 2131230901;
+			
+			// aapt resource value: 0x7f0800bc
+			public const int RightLinearLayout = 2131230908;
 			
 			// aapt resource value: 0x7f0800b7
 			public const int RollButton = 2131230903;
@@ -2654,14 +2663,14 @@ namespace PigAppGame
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800bc
-			public const int masked = 2131230908;
+			// aapt resource value: 0x7f0800bf
+			public const int masked = 2131230911;
 			
 			// aapt resource value: 0x7f08009f
 			public const int media_actions = 2131230879;
 			
-			// aapt resource value: 0x7f0800ba
-			public const int message = 2131230906;
+			// aapt resource value: 0x7f0800bd
+			public const int message = 2131230909;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2909,8 +2918,8 @@ namespace PigAppGame
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800bb
-			public const int visible = 2131230907;
+			// aapt resource value: 0x7f0800be
+			public const int visible = 2131230910;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
