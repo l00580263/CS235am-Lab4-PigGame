@@ -20,6 +20,8 @@ namespace PigAppGame
         public int WhosTurn { get; set; }
         public int TurnScore { get; set; }
         public bool Rollable { get; set; }
+        public string Player1Name { get; set; }
+        public string Player2Name { get; set; }
         #endregion
 
 

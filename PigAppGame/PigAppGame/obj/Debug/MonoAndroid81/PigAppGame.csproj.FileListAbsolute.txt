@@ -74,3 +74,5 @@ C:\Cameron Files\School\LCC\CS 235am\Lab 4\PigApp\PigAppGame\PigAppGame\obj\Debu
 C:\Cameron Files\School\LCC\CS 235am\Lab 4\PigApp\PigAppGame\PigAppGame\obj\Debug\MonoAndroid81\android\assets\System.Runtime.Serialization.pdb
 C:\Cameron Files\School\LCC\CS 235am\Lab 4\PigApp\PigAppGame\PigAppGame\obj\Debug\MonoAndroid81\android\assets\System.ServiceModel.Internals.pdb
 C:\Cameron Files\School\LCC\CS 235am\Lab 4\PigApp\PigAppGame\PigAppGame\obj\Debug\MonoAndroid81\android\assets\System.Xml.pdb
+C:\Cameron Files\School\LCC\CS 235am\Lab 4\PigApp\PigAppGame\PigAppGame\obj\Debug\MonoAndroid81\PigAppGame.csprojAssemblyReference.cache
+C:\Cameron Files\School\LCC\CS 235am\Lab 4\PigApp\PigAppGame\PigAppGame\obj\Debug\MonoAndroid81\linksrc\PigAppGame.pdb

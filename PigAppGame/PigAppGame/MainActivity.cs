@@ -36,7 +36,13 @@ namespace PigAppGame
         protected override void OnSaveInstanceState(Bundle outState)
         {
             // make savedGame
-            SaveGame savedGame = new SaveGame() { Player1Score = game.Player1Score, Player2Score = game.Player2Score, WhosTurn = game.Turn, TurnScore = game.TurnPoints, Rollable = IsRollButtonEnabled()};
+            SaveGame savedGame = new SaveGame() { Player1Score = game.Player1Score,
+                Player2Score = game.Player2Score,
+                WhosTurn = game.Turn,
+                TurnScore = game.TurnPoints,
+                Rollable = IsRollButtonEnabled(),
+                Player1Name = game.Player1Name,
+                Player2Name = game.Player2Name};
             // make writer
             StringWriter writer = new StringWriter();
             // make serializer
@@ -68,23 +74,29 @@ namespace PigAppGame
                 SaveGame savedGame = (SaveGame)cereal.Deserialize(reader);
 
                 // remake game
-                game = new PigLogic(savedGame.Player1Score, savedGame.Player2Score, savedGame.TurnScore, savedGame.WhosTurn);
+                game = new PigLogic(savedGame.Player1Score, savedGame.Player2Score, savedGame.TurnScore, savedGame.WhosTurn) { Player1Name = savedGame.Player1Name, Player2Name = savedGame.Player2Name};
+
+                // update ui names
+                FindViewById<EditText>(Resource.Id.Player1EditText).Text = savedGame.Player1Name;
+                FindViewById<EditText>(Resource.Id.Player2EditText).Text = savedGame.Player2Name;
 
                 // check if turn is bombed
                 if (!savedGame.Rollable)
                 {
                     DisableRollButton();
                 }
+
+                // check if last round was over
+                WinOrLose();
             }
             else
             {
                 // new game
                 game = new PigLogic();
+                // set player names
+                game.Player1Name = FindViewById<EditText>(Resource.Id.Player1EditText).Text;
+                game.Player2Name = FindViewById<EditText>(Resource.Id.Player2EditText).Text;
             }
-
-            // set player names
-            game.Player1Name = FindViewById<TextView>(Resource.Id.Player1EditText).Text;
-            game.Player2Name = FindViewById<TextView>(Resource.Id.Player2EditText).Text;
             
             // set up events so new names will update the game
             FindViewById<EditText>(Resource.Id.Player1EditText).AfterTextChanged += (sender, args) => { game.Player1Name = FindViewById<EditText>(Resource.Id.Player1EditText).Text; UpdateWhosTurn(); };
@@ -97,7 +109,8 @@ namespace PigAppGame
             // roll button rolls and updates points for turn UI and update dice image and checks if bad number was rolled
             FindViewById<Button>(Resource.Id.RollButton).Click += (sender, args) => { UpdateDiceImage(game.RollDie()); UpdatePointsForTurn(); BombTurn(); };
             // end turn button changes player and updates who's turn UI and updates points for turn UI and updates player score UI and enables roll button and checks for winner
-            FindViewById<Button>(Resource.Id.EndTurnButton).Click += (sender, args) => { game.ChangeTurn(); FlushUI(); EnableRollButton(); WinOrLose(); };
+            // check for winner before enabling roll button
+            FindViewById<Button>(Resource.Id.EndTurnButton).Click += (sender, args) => { game.ChangeTurn(); FlushUI(); if (WinOrLose()) { return; } ; EnableRollButton(); };
             // new game turn button resets the game and updates who's turn UI and updates points for turn UI and enables roll button/ new game button
             FindViewById<Button>(Resource.Id.NewGameButton).Click += (sender, args) => { game.ResetGame(); FlushUI(); EnableRollButton(); EnableEndTurnButton(); };
         }
@@ -141,7 +154,6 @@ namespace PigAppGame
             UpdatePlayerScore();
             UpdatePointsForTurn();
             UpdateWhosTurn();
-            WinOrLose();
         }
 
 
@@ -209,19 +221,25 @@ namespace PigAppGame
 
 
 
-        void WinOrLose()
+        bool WinOrLose()
         {
             // get winner
             string winner = game.CheckForWinner();
 
-            if (winner.Length != 0)
+            if (winner.Length != 0 && game.Turn == 1)
             {
                 // if there is a winner, end game
                 DisableRollButton();
                 DisableTurnButton();
                 // display winner
                 FindViewById<TextView>(Resource.Id.TurnLabel).Text = winner + " wins";
+
+                // game over
+                return true;
             }
+
+            // game isn't over
+            return false;
         }
         #endregion
     }
