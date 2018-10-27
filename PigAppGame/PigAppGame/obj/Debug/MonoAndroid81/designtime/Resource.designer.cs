@@ -2420,9 +2420,6 @@ namespace PigAppGame
 			// aapt resource value: 0x7F0C001D
 			public const int center = 2131492893;
 			
-			// aapt resource value: 0x7F020017
-			public const int CenterLinearLayout = 2130837527;
-			
 			// aapt resource value: 0x7F0C001E
 			public const int checkbox = 2131492894;
 			
@@ -2496,7 +2493,13 @@ namespace PigAppGame
 			public const int forever = 2131492873;
 			
 			// aapt resource value: 0x7F020002
-			public const int frameBackgroundImage = 2130837506;
+			public const int fragment1 = 2130837506;
+			
+			// aapt resource value: 0x7F020003
+			public const int fragment2 = 2130837507;
+			
+			// aapt resource value: 0x7F020004
+			public const int frameBackgroundImage = 2130837508;
 			
 			// aapt resource value: 0x7F0C0034
 			public const int ghost_view = 2131492916;
@@ -2516,6 +2519,9 @@ namespace PigAppGame
 			// aapt resource value: 0x7F0C000C
 			public const int info = 2131492876;
 			
+			// aapt resource value: 0x7F020016
+			public const int InstructionsText = 2130837526;
+			
 			// aapt resource value: 0x7F0C000D
 			public const int italic = 2131492877;
 			
@@ -2527,9 +2533,6 @@ namespace PigAppGame
 			
 			// aapt resource value: 0x7F0C003D
 			public const int left = 2131492925;
-			
-			// aapt resource value: 0x7F020016
-			public const int LeftLinearLayout = 2130837526;
 			
 			// aapt resource value: 0x7F0C000E
 			public const int line1 = 2131492878;
@@ -2591,20 +2594,20 @@ namespace PigAppGame
 			// aapt resource value: 0x7F0C0050
 			public const int pin = 2131492944;
 			
-			// aapt resource value: 0x7F020005
-			public const int Player1EditText = 2130837509;
+			// aapt resource value: 0x7F020017
+			public const int Player1EditText = 2130837527;
 			
-			// aapt resource value: 0x7F020003
-			public const int Player1Label = 2130837507;
+			// aapt resource value: 0x7F020005
+			public const int Player1Label = 2130837509;
 			
 			// aapt resource value: 0x7F020007
 			public const int Player1ScoreText = 2130837511;
 			
-			// aapt resource value: 0x7F020006
-			public const int Player2EditText = 2130837510;
+			// aapt resource value: 0x7F020018
+			public const int Player2EditText = 2130837528;
 			
-			// aapt resource value: 0x7F020004
-			public const int Player2Label = 2130837508;
+			// aapt resource value: 0x7F020006
+			public const int Player2Label = 2130837510;
 			
 			// aapt resource value: 0x7F020008
 			public const int Player2ScoreText = 2130837512;
@@ -2623,9 +2626,6 @@ namespace PigAppGame
 			
 			// aapt resource value: 0x7F0C0054
 			public const int right = 2131492948;
-			
-			// aapt resource value: 0x7F020018
-			public const int RightLinearLayout = 2130837528;
 			
 			// aapt resource value: 0x7F0C0014
 			public const int right_icon = 2131492884;
@@ -2725,6 +2725,9 @@ namespace PigAppGame
 			
 			// aapt resource value: 0x7F0C0073
 			public const int start = 2131492979;
+			
+			// aapt resource value: 0x7F020019
+			public const int startButton = 2130837529;
 			
 			// aapt resource value: 0x7F0C0074
 			public const int status_bar_latest_event_content = 2131492980;
@@ -2992,6 +2995,12 @@ namespace PigAppGame
 			// aapt resource value: 0x7F0F0028
 			public const int design_text_input_password_icon = 2131689512;
 			
+			// aapt resource value: 0x7F030003
+			public const int GameActivity = 2130903043;
+			
+			// aapt resource value: 0x7F030004
+			public const int GameFragment = 2130903044;
+			
 			// aapt resource value: 0x7F0F0001
 			public const int notification_action = 2131689473;
 			
@@ -3037,9 +3046,6 @@ namespace PigAppGame
 			// aapt resource value: 0x7F0F0006
 			public const int notification_template_part_time = 2131689478;
 			
-			// aapt resource value: 0x7F030002
-			public const int PigsUI = 2130903042;
-			
 			// aapt resource value: 0x7F0F0038
 			public const int select_dialog_item_material = 2131689528;
 			
@@ -3048,6 +3054,12 @@ namespace PigAppGame
 			
 			// aapt resource value: 0x7F0F003A
 			public const int select_dialog_singlechoice_material = 2131689530;
+			
+			// aapt resource value: 0x7F030002
+			public const int StartActivity = 2130903042;
+			
+			// aapt resource value: 0x7F030005
+			public const int StartFragment = 2130903045;
 			
 			// aapt resource value: 0x7F0F003B
 			public const int support_simple_spinner_dropdown_item = 2131689531;

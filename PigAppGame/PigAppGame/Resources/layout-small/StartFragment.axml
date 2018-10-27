@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<TextView
+		android:text="Look up how to play the game."
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/InstructionsText"
+		android:textAlignment="center"
+		android:textSize="50dp"/>
+	<TextView
+		android:text="Player 1:"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_width="152.0dp"
+		android:layout_height="wrap_content"
+		android:id="@+id/Player1Label"
+		android:textColor="@android:color/background_light"
+		android:layout_marginLeft="0.0dp"
+		android:layout_marginTop="10.6dp"
+		android:background="@android:color/background_dark"
+		android:textAlignment="center"
+		android:textSize="25dp"
+		android:layout_below="@id/InstructionsText"
+		android:layout_alignParentLeft="true" />
+	<TextView
+		android:text="Player 2:"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/Player2Label"
+		android:textColor="@android:color/background_light"
+		android:layout_alignTop="@id/Player1Label"
+		android:layout_marginRight="0.0dp"
+		android:layout_alignBaseline="@id/Player1Label"
+		android:background="@android:color/background_dark"
+		android:textAlignment="center"
+		android:textSize="25dp"
+		android:layout_below="@id/InstructionsText"
+		android:layout_marginTop="0.0dp"
+		android:layout_marginLeft="0.0dp"
+		android:layout_toRightOf="@id/Player1Label"
+		android:layout_alignParentRight="true" />
+	<EditText
+		android:text="Name1"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/Player1Label"
+		android:id="@+id/Player1EditText"
+		android:textColor="@android:color/holo_blue_bright"
+		android:layout_alignLeft="@id/Player1Label"
+		android:layout_marginTop="0.0dp"
+		android:background="@android:color/background_dark"
+		android:textAlignment="center"
+		android:textSize="25dp"
+		android:layout_toLeftOf="@id/Player2Label" />
+	<EditText
+		android:text="Name2"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/Player2EditText"
+		android:textColor="@android:color/holo_red_light"
+		android:layout_alignTop="@id/Player1EditText"
+		android:layout_alignRight="@id/Player2Label"
+		android:layout_below="@id/Player1EditText"
+		android:layout_alignBaseline="@id/Player1EditText"
+		android:layout_marginTop="0.0dp"
+		android:background="@android:color/background_dark"
+		android:textAlignment="center"
+		android:textSize="25dp"
+		android:layout_alignLeft="@id/Player2Label" />
+	<Button
+		android:text="Start"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/Player2EditText"
+		android:id="@+id/startButton"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="31.3dp" />
+
+</RelativeLayout>
