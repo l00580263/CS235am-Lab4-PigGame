@@ -17,8 +17,6 @@ namespace PigAppGame
     [Activity(Label = "@string/app_name", MainLauncher = true)]
     public class StartActivity : Activity
     {
-        string player1Name;
-        string player2Name;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -32,27 +30,25 @@ namespace PigAppGame
             // is large
             bool large = FindViewById<FrameLayout>(Resource.Id.frameBackgroundImage) != null;
 
-            // set up button
-            FindViewById<Button>(Resource.Id.startButton).Click += (sender, e) => {
-
-                if (large)
-                {
-                    // freeze start ui
-                    FindViewById<Button>(Resource.Id.startButton).Enabled = false;
-                    FindViewById<EditText>(Resource.Id.Player1EditText).Enabled = false;
-                    FindViewById<EditText>(Resource.Id.Player2EditText).Enabled = false;
-
-                    // new game                   
-                }
-
+            if (large)
+            {
                 var intent = new Intent(this, typeof(GameActivity));
-                // add names to intent
-                intent.PutExtra("player1Name", FindViewById<EditText>(Resource.Id.Player1EditText).Text);
-                intent.PutExtra("player2Name", FindViewById<EditText>(Resource.Id.Player2EditText).Text);
-                // start game
+                intent.PutExtra("large", large);
                 StartActivity(intent);
-            };
+            }
+            else
+            {
+                // set up button
+                FindViewById<Button>(Resource.Id.startButton).Click += (sender, e) => {
 
+                    var intent = new Intent(this, typeof(GameActivity));
+                    // add names to intent
+                    intent.PutExtra("player1Name", FindViewById<EditText>(Resource.Id.Player1EditText).Text);
+                    intent.PutExtra("player2Name", FindViewById<EditText>(Resource.Id.Player2EditText).Text);
+                    // start game
+                    StartActivity(intent);
+                };
+            }
         }
     }
 }

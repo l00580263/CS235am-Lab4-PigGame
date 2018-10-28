@@ -22,6 +22,8 @@ namespace PigAppGame
         #region Fields
         PigLogic game;
         const string BUNLDE_KEY = "bundlekey";
+        string player1Name;
+        string player2Name;
         #endregion
 
 
@@ -30,16 +32,45 @@ namespace PigAppGame
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+
+            if (Intent.GetBooleanExtra("large", false))
+            {
+                SetContentView(Resource.Layout.StartActivity);
+            }
+            else
+            {
+                SetContentView(Resource.Layout.GameActivity);
+            }
             
-            SetContentView(Resource.Layout.GameActivity);
 
 
             // use portrait
             RequestedOrientation = ScreenOrientation.Portrait;
 
-            // new game
-            SetUp(bundle);
-            
+            Button startButton = FindViewById<Button>(Resource.Id.startButton);
+
+            if (startButton != null)
+            {
+                // set up button
+                startButton.Click += (sender, e) =>
+                {
+                    // get player names
+                    player1Name = FindViewById<EditText>(Resource.Id.Player1EditText).Text;
+                    player2Name = FindViewById<EditText>(Resource.Id.Player2EditText).Text;
+                    // disable edittext view
+                    FindViewById<EditText>(Resource.Id.Player1EditText).Enabled = false;
+                    FindViewById<EditText>(Resource.Id.Player2EditText).Enabled = false;
+                    // disable start button
+                    FindViewById<Button>(Resource.Id.startButton).Enabled = false;
+                };
+            }
+            else
+            {
+                player1Name = Intent.GetStringExtra("player1Name");
+                player2Name = Intent.GetStringExtra("player2Name");
+                // new game
+                SetUp(bundle);
+            }            
         }
 
 
@@ -77,8 +108,8 @@ namespace PigAppGame
                 
                 // set player names
 
-                game.Player1Name = Intent.Extras.GetString("player1Name");
-                game.Player2Name = Intent.Extras.GetString("player2Name");
+                game.Player1Name = player1Name;
+                game.Player2Name = player2Name;
              
             }
 

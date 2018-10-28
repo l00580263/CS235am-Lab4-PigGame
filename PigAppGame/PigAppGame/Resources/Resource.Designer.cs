@@ -2375,20 +2375,26 @@ namespace PigAppGame
 			// aapt resource value: 0x7f0800a5
 			public const int NewGameButton = 2131230885;
 			
-			// aapt resource value: 0x7f0800bb
-			public const int Player1EditText = 2131230907;
+			// aapt resource value: 0x7f0800bd
+			public const int Player1EditText = 2131230909;
 			
 			// aapt resource value: 0x7f08009b
 			public const int Player1Label = 2131230875;
 			
+			// aapt resource value: 0x7f0800bb
+			public const int Player1NameLabel = 2131230907;
+			
 			// aapt resource value: 0x7f08009d
 			public const int Player1ScoreText = 2131230877;
 			
-			// aapt resource value: 0x7f0800bc
-			public const int Player2EditText = 2131230908;
+			// aapt resource value: 0x7f0800be
+			public const int Player2EditText = 2131230910;
 			
 			// aapt resource value: 0x7f08009c
 			public const int Player2Label = 2131230876;
+			
+			// aapt resource value: 0x7f0800bc
+			public const int Player2NameLabel = 2131230908;
 			
 			// aapt resource value: 0x7f08009e
 			public const int Player2ScoreText = 2131230878;
@@ -2663,14 +2669,14 @@ namespace PigAppGame
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800c0
-			public const int masked = 2131230912;
+			// aapt resource value: 0x7f0800c2
+			public const int masked = 2131230914;
 			
 			// aapt resource value: 0x7f0800ac
 			public const int media_actions = 2131230892;
 			
-			// aapt resource value: 0x7f0800be
-			public const int message = 2131230910;
+			// aapt resource value: 0x7f0800c0
+			public const int message = 2131230912;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2834,8 +2840,8 @@ namespace PigAppGame
 			// aapt resource value: 0x7f08004b
 			public const int start = 2131230795;
 			
-			// aapt resource value: 0x7f0800bd
-			public const int startButton = 2131230909;
+			// aapt resource value: 0x7f0800bf
+			public const int startButton = 2131230911;
 			
 			// aapt resource value: 0x7f0800ab
 			public const int status_bar_latest_event_content = 2131230891;
@@ -2921,8 +2927,8 @@ namespace PigAppGame
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800bf
-			public const int visible = 2131230911;
+			// aapt resource value: 0x7f0800c1
+			public const int visible = 2131230913;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;

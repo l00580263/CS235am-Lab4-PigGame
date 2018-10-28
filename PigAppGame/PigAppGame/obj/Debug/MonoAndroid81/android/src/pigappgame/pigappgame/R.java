@@ -2963,11 +2963,13 @@ containing a value of this type.
         public static final int InstructionsText=0x7f0800ba;
         public static final int META=0x7f080035;
         public static final int NewGameButton=0x7f0800a5;
-        public static final int Player1EditText=0x7f0800bb;
+        public static final int Player1EditText=0x7f0800bd;
         public static final int Player1Label=0x7f08009b;
+        public static final int Player1NameLabel=0x7f0800bb;
         public static final int Player1ScoreText=0x7f08009d;
-        public static final int Player2EditText=0x7f0800bc;
+        public static final int Player2EditText=0x7f0800be;
         public static final int Player2Label=0x7f08009c;
+        public static final int Player2NameLabel=0x7f0800bc;
         public static final int Player2ScoreText=0x7f08009e;
         public static final int PointsForTurnLabel=0x7f0800a1;
         public static final int RollButton=0x7f0800a3;
@@ -3059,9 +3061,9 @@ containing a value of this type.
         public static final int line3=0x7f080018;
         public static final int listMode=0x7f08001d;
         public static final int list_item=0x7f080061;
-        public static final int masked=0x7f0800c0;
+        public static final int masked=0x7f0800c2;
         public static final int media_actions=0x7f0800ac;
-        public static final int message=0x7f0800be;
+        public static final int message=0x7f0800c0;
         public static final int middle=0x7f080031;
         public static final int mini=0x7f080053;
         public static final int multiply=0x7f080028;
@@ -3116,7 +3118,7 @@ containing a value of this type.
         public static final int src_in=0x7f08002b;
         public static final int src_over=0x7f08002c;
         public static final int start=0x7f08004b;
-        public static final int startButton=0x7f0800bd;
+        public static final int startButton=0x7f0800bf;
         public static final int status_bar_latest_event_content=0x7f0800ab;
         public static final int submenuarrow=0x7f080076;
         public static final int submit_area=0x7f080087;
@@ -3145,7 +3147,7 @@ containing a value of this type.
         public static final int up=0x7f080009;
         public static final int useLogo=0x7f080026;
         public static final int view_offset_helper=0x7f080016;
-        public static final int visible=0x7f0800bf;
+        public static final int visible=0x7f0800c1;
         public static final int withText=0x7f08003c;
         public static final int wrap_content=0x7f08002e;
     }

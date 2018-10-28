@@ -2594,20 +2594,26 @@ namespace PigAppGame
 			// aapt resource value: 0x7F0C0050
 			public const int pin = 2131492944;
 			
-			// aapt resource value: 0x7F020017
-			public const int Player1EditText = 2130837527;
+			// aapt resource value: 0x7F020019
+			public const int Player1EditText = 2130837529;
 			
 			// aapt resource value: 0x7F020005
 			public const int Player1Label = 2130837509;
 			
+			// aapt resource value: 0x7F020017
+			public const int Player1NameLabel = 2130837527;
+			
 			// aapt resource value: 0x7F020007
 			public const int Player1ScoreText = 2130837511;
 			
-			// aapt resource value: 0x7F020018
-			public const int Player2EditText = 2130837528;
+			// aapt resource value: 0x7F020020
+			public const int Player2EditText = 2130837536;
 			
 			// aapt resource value: 0x7F020006
 			public const int Player2Label = 2130837510;
+			
+			// aapt resource value: 0x7F020018
+			public const int Player2NameLabel = 2130837528;
 			
 			// aapt resource value: 0x7F020008
 			public const int Player2ScoreText = 2130837512;
@@ -2726,8 +2732,8 @@ namespace PigAppGame
 			// aapt resource value: 0x7F0C0073
 			public const int start = 2131492979;
 			
-			// aapt resource value: 0x7F020019
-			public const int startButton = 2130837529;
+			// aapt resource value: 0x7F020021
+			public const int startButton = 2130837537;
 			
 			// aapt resource value: 0x7F0C0074
 			public const int status_bar_latest_event_content = 2131492980;
