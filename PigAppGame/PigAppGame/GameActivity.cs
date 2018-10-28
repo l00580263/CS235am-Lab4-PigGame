@@ -33,7 +33,9 @@ namespace PigAppGame
         {
             base.OnCreate(bundle);
 
-            if (Intent.GetBooleanExtra("large", false))
+            bool large = Intent.GetBooleanExtra("large", false);
+
+            if (large)
             {
                 SetContentView(Resource.Layout.StartActivity);
             }
@@ -49,7 +51,7 @@ namespace PigAppGame
 
             Button startButton = FindViewById<Button>(Resource.Id.startButton);
 
-            if (startButton != null)
+            if (large)
             {
                 // set up button
                 startButton.Click += (sender, e) =>
@@ -61,7 +63,9 @@ namespace PigAppGame
                     FindViewById<EditText>(Resource.Id.Player1EditText).Enabled = false;
                     FindViewById<EditText>(Resource.Id.Player2EditText).Enabled = false;
                     // disable start button
-                    FindViewById<Button>(Resource.Id.startButton).Enabled = false;
+                    startButton.Enabled = false;
+                    // new game
+                    SetUp(bundle);
                 };
             }
             else

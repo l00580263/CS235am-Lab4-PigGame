@@ -28,7 +28,7 @@ namespace PigAppGame
             RequestedOrientation = ScreenOrientation.Portrait;
 
             // is large
-            bool large = FindViewById<FrameLayout>(Resource.Id.frameBackgroundImage) != null;
+            bool large = FindViewById<ImageView>(Resource.Id.DieImage) != null;
 
             if (large)
             {
